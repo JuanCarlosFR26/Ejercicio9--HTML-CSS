@@ -1,0 +1,50 @@
+.caja1, .caja2 {
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+}
+
+.caja1 {
+    background-color: rgb(228, 0, 171);
+}
+
+.caja1:hover {
+    animation-name: rotar;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.caja2 {
+    background-color: rgb(127, 225, 255);
+}
+
+.caja2:hover {
+    animation-name: fade;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-duration: 3s;
+}
+
+/*KEYFRAMES*/
+
+@keyframes rotar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+    
+}
+
+@keyframes fade {
+    from {
+        transform: translateX(0px);
+        filter: opacity(1);
+    }
+    to{
+        transform: translateX(600px);
+        filter: opacity(0);
+    }
+}
